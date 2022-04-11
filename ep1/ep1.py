@@ -68,7 +68,7 @@ for i in range(n):
     
     c[i] = 1. - a[i]
     b[i] = 2.
-    d[i] = np.cos((2. * np.pi * (i**2)) / (n**2))
+    d[i] = np.cos((2. * np.pi * (ind**2)) / (n**2))
 
 x = solve_lu_cyclic(a,b,c,d,n)
-print(x)
+print("The solution of the cyclic tridiagonal system is: ",x)
