@@ -1,0 +1,30 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{center}
+\textbf{MAP2121 - CÁLCULO NUMÉRICO (POLI - USP)}\\
+\textbf{List of exercises about zeros (roots) of functions}\\
+\textbf{Solved by Gustavo Quintero}
+\end{center}
+\begin{itemize}
+\item[1.] Show that the function $f(x)=x^2 - 4x + \cos(x)$ has exactly two roots: $\alpha_1\in [0,1.8]$ and $\alpha_2\in [3,5]$. Consider the functions:
+\begin{equation*}
+\phi_1(x) = \dfrac{x^2 + \cos(x)}{4}\quad\text{and}\quad\phi_2(x)=\dfrac{\cos(x)}{4-x}.
+\end{equation*}
+Mark with C for the correct alternatives and E for the wrong alternatives:
+\begin{itemize}
+\item[a)] $\phi_1$ can be used in the interval $[0,1.8]$ to approximate $\alpha_1$ by successive approximation method, but $\phi_2(x)$ can't be used in this interval.
+\item[b)] $\phi_1$ and $\phi(x)_2$ can be used in the interval $[0,1.8]$  to approximate $\alpha_1$ by successive approximation method.
+\item[c)] $\phi(x)_2$ can be used in the interval $[3,5]$  to approximate $\alpha_2$ by successive approximation method, but $\phi_1(x)$ can't be used in this interval.
+\item[d)]  $\phi_1$ and $\phi(x)_2$ can be used in the interval $[3,5]$  to approximate $\alpha_2$ by successive approximation method.
+\item[e)]  $\phi_1$ can be used to approximate $\alpha_1$  in the interval $[0,1.8]$ and also to approximate $\alpha_2$  in the interval $[3,5]$.
+\end{itemize}
+\textbf{Solution:} We define $g(x) = x - f(x) = -x^2 - 3x - \cos(x)$. Then, $g'(x) = \sin(x) - 2x - 3$. Note that, $g(0)=-1<0$ and $g(1.8) = 5.9872>1.8$. In addition, $g'(x)$ is decreasing for all $x\in[0,1.8]$, therefore its maximum value occurs at $x = 0$. Since $g'(0)=-3$,  we deduce that $g'(x)\neq 1$. So, there exist a fixed point $\alpha_1$ of $g(x)$ in $[0,1.8]$, which means that there exist a root of $f(x)$~in $[0,1.8]$. Analogously we can show that there exist a fixed point $\alpha_2$ of $f(x)$ in $[3,5]$.
+\end{itemize}
+\end{document}
