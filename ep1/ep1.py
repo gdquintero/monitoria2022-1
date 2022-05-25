@@ -52,7 +52,7 @@ def solve_lu_cyclic(a_cyc,b_cyc,c_cyc,d_cyc,n):
     return x_cyc
 
 # Starting Task 1
-n = 20
+n = 5
 
 a = np.zeros(n)
 b = np.zeros(n)
@@ -61,14 +61,18 @@ d = np.zeros(n)
 
 for i in range(n):
     ind = i + 1
-    if (i < n):
+    if (i < n - 1):
         a[i] = ((2. * ind) - 1.) / (4. * ind)
     else:
-        a[i] = ((2 * n) -1) / (2. * n)
+        a[i] = ((2 * ind) -1) / (2. * ind)
     
     c[i] = 1. - a[i]
     b[i] = 2.
     d[i] = np.cos((2. * np.pi * (ind**2)) / (n**2))
 
+
 x = solve_lu_cyclic(a,b,c,d,n)
-print("The solution of the cyclic tridiagonal system is: ",x)
+print("The solution of the cyclic tridiagonal system is: ","\n")
+print(x)
+
+
